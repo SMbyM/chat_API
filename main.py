@@ -20,7 +20,7 @@ def login():
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('D:\APIProject\chat_API\index.html')
 
 
 if __name__ == '__main__':
