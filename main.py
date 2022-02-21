@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, render_template
 
 app = Flask(__name__)
 
@@ -16,6 +16,11 @@ def login():
     else:
         user = request.args.get('nm')
         return redirect(url_for('success', name=user))
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
